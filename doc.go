@@ -60,7 +60,7 @@ func main() {
 				title = v
 				continue
 			}
-			routeComments = append(routeComments, strings.TrimSpace(v))
+			routeComments = append(routeComments, fmt.Sprintf("%s: %s", k, strings.TrimSpace(v)))
 		}
 
 		requestContent, err := buildDoc(route.RequestType, allTypes)
